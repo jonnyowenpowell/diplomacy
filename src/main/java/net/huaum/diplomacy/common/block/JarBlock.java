@@ -1,7 +1,5 @@
 package net.huaum.diplomacy.common.block;
 
-import javax.swing.text.html.BlockView;
-
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
@@ -15,6 +13,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 
 public class JarBlock extends Block {
 
