@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderLayer;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
-import net.minecraft.block.MaterialColor;
 import net.minecraft.entity.VerticalEntityPosition;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
@@ -23,7 +22,7 @@ public class JarBlock extends Block {
     private static final VoxelShape SHAPE;
 
     public JarBlock() {
-        super(FabricBlockSettings.of(Material.GLASS, MaterialColor.AIR).strength(1f, 1f).sounds(BlockSoundGroup.GLASS).build());
+        super(FabricBlockSettings.of(Material.GLASS).strength(1f, 1f).sounds(BlockSoundGroup.GLASS).build());
     }
 
     @Environment(EnvType.CLIENT)
