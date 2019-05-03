@@ -3,6 +3,7 @@
   "package": "net.huaum.diplomacy.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "MixinBellBlockEntityRenderer",
     "MixinCreeperIgniteGoal",
     "MixinZombieEntity"
   ],

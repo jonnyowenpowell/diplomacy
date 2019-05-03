@@ -26,7 +26,7 @@ public abstract class MixinZombieEntity extends HostileEntity {
 	@Shadow
 	public static EntityAttribute SPAWN_REINFORCEMENTS;
 
-	@Redirect(method = "initCustomGoals", at = @At(value = "NEW", args = "target=net/minecraft/entity/ai/goal/FollowTargetGoal"))
+	@Redirect(method = "initCustomGoals()V", at = @At(value = "NEW", target = "<init>(Lnet/minecraft/entity/mob/MobEntity;Ljava/lang/Class;Z)Lnet/minecraft/entity/ai/goal/FollowTargetGoal;"))
 	public <T extends LivingEntity> FollowTargetGoal<T> replaceFollowTargetGoalPlayerEntity(MobEntity entity, Class<T> targetEntity, boolean checkVisiblity) {
 		if (targetEntity == PlayerEntity.class) {
 			return new FollowTargetWithoutCarrotGoal<>(entity, targetEntity, checkVisiblity);

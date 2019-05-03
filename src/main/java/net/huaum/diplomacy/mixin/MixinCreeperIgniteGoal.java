@@ -16,7 +16,7 @@ public abstract class MixinCreeperIgniteGoal extends Goal {
 	@Shadow
 	private CreeperEntity owner;
 
-	@Inject(method = "tick", at = @At("RETURN"), cancellable = true)
+	@Inject(method = "tick()V", at = @At("RETURN"), cancellable = true)
 	private void onTick(CallbackInfo ci) {
 		CreeperEntity creeper = this.owner;
 		if(creeper.getFuseSpeed() > 0 && creeper.isTouchingWater()) {
