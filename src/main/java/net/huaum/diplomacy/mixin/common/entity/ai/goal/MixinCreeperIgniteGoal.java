@@ -1,4 +1,4 @@
-package net.huaum.diplomacy.mixin;
+package net.huaum.diplomacy.mixin.common.entity.ai.goal;
 
 import net.minecraft.entity.ai.goal.CreeperIgniteGoal;
 import net.minecraft.entity.ai.goal.Goal;

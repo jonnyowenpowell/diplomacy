@@ -1,4 +1,4 @@
-package net.huaum.diplomacy.mixin;
+package net.huaum.diplomacy.mixin.client.render.block.entity;
 
 import net.minecraft.block.entity.BellBlockEntity;
 import net.minecraft.client.render.block.entity.BellBlockEntityRenderer;
@@ -16,13 +16,13 @@ public abstract class MixinBellBlockEntityRenderer extends BlockEntityRenderer<B
 
     @Shadow
     private static Identifier BELL_BODY_TEXTURE;
-
+    
     @Shadow
     private BellModel model;
 
     @Redirect(method = "method_17139(Lnet/minecraft/block/entity/BellBlockEntity;DDDFI)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/block/entity/BellModel;method_17070(FFF)V"))
 	public void animateBellExtreme(BellModel bellModel, float float_1, float float_2, float float_3) {
-        bellModel.method_17070(float_1*150, float_2*150, 0.0625F);
+        bellModel.method_17070(float_1*20, float_2*20, 0.0625F);
      }
 	
 }

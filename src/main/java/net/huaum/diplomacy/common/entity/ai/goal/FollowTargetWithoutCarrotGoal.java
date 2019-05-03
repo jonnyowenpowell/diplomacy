@@ -1,4 +1,4 @@
-package net.huaum.diplomacy.goal;
+package net.huaum.diplomacy.common.entity.ai.goal;
 
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;

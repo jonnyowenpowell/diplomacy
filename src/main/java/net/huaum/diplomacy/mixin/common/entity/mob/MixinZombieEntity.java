@@ -1,6 +1,5 @@
-package net.huaum.diplomacy.mixin;
+package net.huaum.diplomacy.mixin.common.entity.mob;
 
-import net.huaum.diplomacy.goal.FollowTargetWithoutCarrotGoal;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.FollowTargetGoal;
@@ -16,15 +15,17 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
+import net.huaum.diplomacy.common.entity.ai.goal.FollowTargetWithoutCarrotGoal;
+
 @Mixin(ZombieEntity.class)
 public abstract class MixinZombieEntity extends HostileEntity {
+
+	@Shadow
+	public static EntityAttribute SPAWN_REINFORCEMENTS;
 
 	protected MixinZombieEntity(EntityType<? extends HostileEntity> type, World world) {
 		super(type, world);
 	}
-
-	@Shadow
-	public static EntityAttribute SPAWN_REINFORCEMENTS;
 
 	@Redirect(method = "initCustomGoals()V", at = @At(value = "NEW", target = "<init>(Lnet/minecraft/entity/mob/MobEntity;Ljava/lang/Class;Z)Lnet/minecraft/entity/ai/goal/FollowTargetGoal;"))
 	public <T extends LivingEntity> FollowTargetGoal<T> replaceFollowTargetGoalPlayerEntity(MobEntity entity, Class<T> targetEntity, boolean checkVisiblity) {
