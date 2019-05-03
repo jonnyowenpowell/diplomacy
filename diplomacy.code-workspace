@@ -11,6 +11,26 @@
 			"**/.settings": true,
 			"**/.factorypath": true
 		},
-		"java.configuration.updateBuildConfiguration": "automatic"
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"gotoSymbolStack.currentStackPosition": 2,
+		"gotoSymbolStack.maxStackPosition": 2,
+		"gotoSymbolStack.filePositionInfo": [
+			{
+				"textFile": "/minecraft-1.14-mapped-1.jar/net.minecraft.entity.mob/ZombieEntity.class",
+				"viewColumn": 1,
+				"textPosition": {
+					"line": 59,
+					"character": 13
+				}
+			},
+			{
+				"textFile": "/minecraft-1.14-mapped-1.jar/net.minecraft.entity.mob/ZombieEntity.class",
+				"viewColumn": 1,
+				"textPosition": {
+					"line": 59,
+					"character": 13
+				}
+			}
+		]
 	}
 }

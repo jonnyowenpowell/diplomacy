@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "diplomacy",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Diplomacy",
+  "description": "Don't fight against mobs, work with them!",
   "authors": [
-    "Me!"
+    "huaum"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://google.co.uk",
+    "sources": "https://github.com/notmadeyet"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/diplomacy/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.huaum.diplomacy.Diplomacy"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "diplomacy.mixins.json"
   ],
 
   "requires": {
