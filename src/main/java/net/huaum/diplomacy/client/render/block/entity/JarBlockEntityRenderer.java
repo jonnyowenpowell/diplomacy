@@ -7,10 +7,8 @@ import net.fabricmc.api.Environment;
 import net.huaum.diplomacy.common.block.entity.JarBlockEntity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.CreeperEntity;
-import net.minecraft.entity.passive.PigEntity;
 
 @Environment(EnvType.CLIENT)
 public class JarBlockEntityRenderer extends BlockEntityRenderer<JarBlockEntity> {
