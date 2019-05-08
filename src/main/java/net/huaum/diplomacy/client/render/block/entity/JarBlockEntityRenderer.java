@@ -26,7 +26,7 @@ public class JarBlockEntityRenderer extends BlockEntityRenderer<JarBlockEntity> 
       GlStateManager.pushMatrix();
       GlStateManager.translatef((float)x + 0.5F, (float)y + 0.05F, (float)z + 0.5F);
       GlStateManager.scalef(scale, scale, scale);
-      MinecraftClient.getInstance().getEntityRenderManager().render(renderedEntity, 0.0D, 0.0D, 0.0D, 0.0F, delta, false);
+      MinecraftClient.getInstance().getEntityRenderManager().render(renderedEntity, 0.0D, 0.0D, 0.0D, 0.0F, 0.0F, false);
       GlStateManager.popMatrix();
    }
 
