@@ -1,5 +1,11 @@
 package net.huaum.diplomacy.mixin.common.entity.mob;
 
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
+
+import net.huaum.diplomacy.common.entity.ai.goal.FollowTargetWithoutCarrotGoal;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.FollowTargetGoal;
@@ -9,13 +15,6 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
-
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
-
-import net.huaum.diplomacy.common.entity.ai.goal.FollowTargetWithoutCarrotGoal;
 
 @Mixin(ZombieEntity.class)
 public abstract class MixinZombieEntity extends HostileEntity {

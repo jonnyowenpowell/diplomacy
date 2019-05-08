@@ -1,15 +1,15 @@
 package net.huaum.diplomacy.mixin.client.render.block.entity;
 
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
+
 import net.minecraft.block.entity.BellBlockEntity;
 import net.minecraft.client.render.block.entity.BellBlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BellModel;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.util.Identifier;
-
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.Redirect;
-import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(BellBlockEntityRenderer.class)
 public abstract class MixinBellBlockEntityRenderer extends BlockEntityRenderer<BellBlockEntity> {

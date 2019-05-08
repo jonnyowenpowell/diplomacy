@@ -3,10 +3,14 @@ package net.huaum.diplomacy.common.block;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.huaum.diplomacy.common.block.entity.JarBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderLayer;
+import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.Material;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.VerticalEntityPosition;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
@@ -14,7 +18,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 
-public class JarBlock extends Block {
+public class JarBlock extends BlockWithEntity {
 
     private static final VoxelShape jar_body_shape;
     private static final VoxelShape jar_neck_shape;
@@ -25,9 +29,18 @@ public class JarBlock extends Block {
         super(FabricBlockSettings.of(Material.GLASS).strength(1f, 1f).sounds(BlockSoundGroup.GLASS).build());
     }
 
+    public BlockEntity createBlockEntity(BlockView blockView_1) {
+        return new JarBlockEntity();
+     }
+
     @Environment(EnvType.CLIENT)
     public BlockRenderLayer getRenderLayer() {
         return BlockRenderLayer.TRANSLUCENT;
+    }
+
+    @Environment(EnvType.CLIENT)
+    public BlockRenderType getRenderType(BlockState blockState_1) {
+        return BlockRenderType.MODEL;
     }
 
     @Override

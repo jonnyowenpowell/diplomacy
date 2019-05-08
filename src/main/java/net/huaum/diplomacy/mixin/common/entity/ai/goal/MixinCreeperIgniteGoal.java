@@ -1,14 +1,14 @@
 package net.huaum.diplomacy.mixin.common.entity.ai.goal;
 
-import net.minecraft.entity.ai.goal.CreeperIgniteGoal;
-import net.minecraft.entity.ai.goal.Goal;
-import net.minecraft.entity.mob.CreeperEntity;
-
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import net.minecraft.entity.ai.goal.CreeperIgniteGoal;
+import net.minecraft.entity.ai.goal.Goal;
+import net.minecraft.entity.mob.CreeperEntity;
 
 @Mixin(CreeperIgniteGoal.class)
 public abstract class MixinCreeperIgniteGoal extends Goal {
