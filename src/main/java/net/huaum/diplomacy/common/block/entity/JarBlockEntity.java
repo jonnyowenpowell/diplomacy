@@ -11,13 +11,13 @@ public class JarBlockEntity extends BlockEntity {
       super(Diplomacy.JAR_BLOCK_ENTITY);
    }
 
-   public void fromTag(CompoundTag compoundTag_1) {
-      super.fromTag(compoundTag_1);
+   public void fromTag(CompoundTag compoundTag) {
+      super.fromTag(compoundTag);
    }
 
-   public CompoundTag toTag(CompoundTag compoundTag_1) {
-      super.toTag(compoundTag_1);
-      return compoundTag_1;
+   public CompoundTag toTag(CompoundTag compoundTag) {
+      super.toTag(compoundTag);
+      return compoundTag;
    }
 
    public BlockEntityUpdateS2CPacket toUpdatePacket() {

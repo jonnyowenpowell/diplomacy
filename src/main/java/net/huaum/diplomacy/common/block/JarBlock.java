@@ -23,13 +23,13 @@ public class JarBlock extends BlockWithEntity {
     private static final VoxelShape jar_body_shape;
     private static final VoxelShape jar_neck_shape;
     private static final VoxelShape jar_cork_shape;
-    private static final VoxelShape SHAPE;
+    private static final VoxelShape jar_shape;
 
     public JarBlock() {
         super(FabricBlockSettings.of(Material.GLASS).strength(1f, 1f).sounds(BlockSoundGroup.GLASS).build());
     }
 
-    public BlockEntity createBlockEntity(BlockView blockView_1) {
+    public BlockEntity createBlockEntity(BlockView blockView) {
         return new JarBlockEntity();
      }
 
@@ -39,20 +39,20 @@ public class JarBlock extends BlockWithEntity {
     }
 
     @Environment(EnvType.CLIENT)
-    public BlockRenderType getRenderType(BlockState blockState_1) {
+    public BlockRenderType getRenderType(BlockState blockState) {
         return BlockRenderType.MODEL;
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, VerticalEntityPosition verticalEntityPosition) {
-        return SHAPE;
+        return jar_shape;
     }
 
     static {
         jar_body_shape = Block.createCuboidShape(3.0D, 0.0D, 3.0D, 13.0D, 10.0D, 13.0D);
         jar_neck_shape = Block.createCuboidShape(5.5D, 10.0D, 5.5D, 5.5D, 11.5D, 5.5D);
         jar_cork_shape = Block.createCuboidShape(6.0D, 10.0D, 6.0D, 10.0D, 12.0D, 10.0D);
-        SHAPE = VoxelShapes.union(jar_body_shape, jar_neck_shape, jar_cork_shape);
+        jar_shape = VoxelShapes.union(jar_body_shape, jar_neck_shape, jar_cork_shape);
     }
 
 }
