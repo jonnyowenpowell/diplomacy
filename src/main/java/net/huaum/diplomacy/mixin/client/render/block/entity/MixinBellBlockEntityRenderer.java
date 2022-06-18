@@ -21,8 +21,7 @@ public abstract class MixinBellBlockEntityRenderer extends BlockEntityRenderer<B
     private BellModel model;
 
     @Redirect(method = "method_17139(Lnet/minecraft/block/entity/BellBlockEntity;DDDFI)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/block/entity/BellModel;method_17070(FFF)V"))
-	public void animateBellExtreme(BellModel bellModel, float pitch, float roll, float scale) {
+    public void animateBellExtreme(BellModel bellModel, float pitch, float roll, float scale) {
         bellModel.method_17070(pitch*20, roll*20, 0.0625F);
-     }
-	
+    }
 }
